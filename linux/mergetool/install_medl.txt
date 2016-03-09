@@ -1,0 +1,28 @@
+1、由于meld使用了gtk、glib等gnome的库，需要首先安装必要库
+sudo yum install libgnomeui-devel
+
+sudo yum install itstool
+
+2、meld也使用到了gtksourceview
+需要安装gtksourceview3.10以上版本，可在以下链接下载。
+http://mirrors.ustc.edu.cn/gnome/sources/gtksourceview/3.10/gtksourceview-3.10.3.tar.xz
+meld 3.11.4版本，此步可忽略
+3、下载&安装meld
+http://mirrors.ustc.edu.cn/gnome/sources/meld/3.11/meld-3.11.4.tar.xz
+使用以上链接下载，解压缩，进入到meld目录中，执行以下命令
+sudo python setup.py install
+
+
+
+For each repository 
+
+git mergetool -t meld
+
+
+
+
+Configure Git For Your Mergetool Of Choice
+
+To configure git to remember which merge tool you want, type git config –global merge.tool [tool]. 
+For example, if you want git mergetool to automatically use kdiff3 as our mergetool, we would type:
+$ git config --global merge.tool kdiff3
