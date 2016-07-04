@@ -45,7 +45,27 @@ git loggit log# 查看该文件每次提交记录
 git log -p # 查看每次详细修改内容的diff
 git log -p -2# 查看最近两次详细修改内容的diff
 git log --stat# 查看提交统计信息
-tig
+git log --oneline
+git log --author=test --online - 5
+git log --graph
+git log --oneline --after={2015-04-07}
+
+example:
+git log --oneline
+git difftool 984b8b37a 4a389fa38
+git chekcout <onecommitit> // 而git checkout 1aea8d9^ 表示1aea8d9前一次
+git checkout <branch> // revert back
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+  
+而git reset --HARD 就是将index & working directory设置成与commit 一样
+
+
 
 Mac上可以使用tig代替diff和log，brew install tig
 
