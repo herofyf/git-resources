@@ -50,7 +50,7 @@ git log --author=test --online - 5
 git log --graph
 git log --oneline --after={2015-04-07}
 
-example:
+******example:
 git log --oneline
 git difftool 984b8b37a 4a389fa38
 git chekcout <onecommitit> // 而git checkout 1aea8d9^ 表示1aea8d9前一次
@@ -63,9 +63,12 @@ Changes not staged for commit:
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
   
-而git reset --HARD 就是将index & working directory设置成与commit 一样
+而git reset --HARD 就是将index & working directory设置成HEAD值，比如：你checkout old commit and make some modification, 用这个命令直接恢复到HEAD 而不是detached HEAD
 
+而如果你要revert千万别checkout old commit-> modify, 而应该使用git revert
+checkout old commit->modify 这个需求要建立在需要new branch
 
+******
 
 Mac上可以使用tig代替diff和log，brew install tig
 
