@@ -63,7 +63,8 @@ Changes not staged for commit:
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
   
-而git reset --HARD 就是将index & working directory设置成HEAD值，比如：你checkout old commit and make some modification, 用这个命令直接恢复到HEAD 而不是detached HEAD
+而git reset --HARD 就是将index & working directory设置成HEAD值，比如：你checkout old commit and make some modification, 用这个命令将当前修改的内容+index discard一致到当前commit node, 而如果想要到branch head,则用git checkout <branchname>
+
 
 而如果你要revert千万别checkout old commit-> modify, 而应该使用git revert
 checkout old commit->modify 这个需求要建立在需要new branch
