@@ -56,6 +56,9 @@ git difftool 984b8b37a 4a389fa38
 git chekcout <onecommitit> // 而git checkout 1aea8d9^ 表示1aea8d9前一次
 git checkout <branch> // revert back
 
+git checkout --ours filename.c   // 当merge冲突时，你可以通过manual merge,或接受自己、别人的，就用--ours, --theirs
+git checkout --theirs filename.c
+
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
